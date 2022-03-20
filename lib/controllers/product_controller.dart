@@ -1,4 +1,4 @@
-import 'package:flutter_paulo/services/product_service.dart';
+import 'package:flutter_practice/services/product_service.dart';
 import 'package:get/get.dart';
 
 class ProductController extends GetxController {
@@ -24,3 +24,4 @@ class ProductController extends GetxController {
     }
   }
 }
+

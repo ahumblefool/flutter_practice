@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_paulo/model/Question.dart';
-import 'package:flutter_paulo/model/movie.dart';
-import 'package:flutter_paulo/util/HexColor.dart';
+import 'package:flutter_practice/model/Question.dart';
+import 'package:flutter_practice/model/movie.dart';
+import 'package:flutter_practice/util/HexColor.dart';
 
 class QuizApp extends StatefulWidget {
   @override
@@ -239,7 +239,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -250,7 +250,7 @@ class MyHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
+  final String? title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -282,7 +282,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
+        title: Text(widget.title!),
       ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
@@ -801,10 +801,10 @@ class MovieListView extends StatelessWidget {
 
 // New route(screen or page)
 class MovieDetailsView extends StatelessWidget {
-  final String movieName;
-  final Movie movie;
+  final String? movieName;
+  final Movie? movie;
 
-  const MovieDetailsView({Key key, this.movieName, this.movie})
+  const MovieDetailsView({Key? key, this.movieName, this.movie})
       : super(key: key);
 
   @override
@@ -827,7 +827,7 @@ class MovieDetailsView extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           MovieDetailsThumbnail(
-            thumbnail: movie.images.elementAt(0),
+            thumbnail: movie!.images.elementAt(0),
           ),
           Text("Some text..."),
           HorizontalLine(),
@@ -838,9 +838,9 @@ class MovieDetailsView extends StatelessWidget {
 }
 
 class MovieDetailsThumbnail extends StatelessWidget {
-  final String thumbnail;
+  final String? thumbnail;
 
-  const MovieDetailsThumbnail({Key key, this.thumbnail}) : super(key: key);
+  const MovieDetailsThumbnail({Key? key, this.thumbnail}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -855,7 +855,7 @@ class MovieDetailsThumbnail extends StatelessWidget {
               height: 200,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: NetworkImage(thumbnail), fit: BoxFit.cover)),
+                      image: NetworkImage(thumbnail!), fit: BoxFit.cover)),
             ),
             Icon(
               Icons.play_circle_outline,

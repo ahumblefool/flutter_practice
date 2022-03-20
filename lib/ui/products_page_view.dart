@@ -1,9 +1,9 @@
-import 'package:flutter_paulo/controllers/product_controller.dart';
+import 'package:flutter_practice/controllers/product_controller.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_paulo/controllers/product_controller.dart';
-import 'package:flutter_paulo/ui/product_tile.dart';
+import 'package:flutter_practice/controllers/product_controller.dart';
+import 'package:flutter_practice/ui/product_tile.dart';
 
 class ProductsPageView extends StatelessWidget {
   final ProductController productController = Get.put(ProductController());

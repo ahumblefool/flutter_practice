@@ -1,4 +1,4 @@
-import 'package:flutter_paulo/model/product_model.dart';
+import 'package:flutter_practice/model/product_model.dart';
 import 'package:http/http.dart' as http;
 
 class ProductService {

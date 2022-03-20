@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_paulo/model/product_model.dart';
+import 'package:flutter_practice/model/product_model.dart';
 
 class ProductTile extends StatelessWidget {
   final ProductsModel product;
@@ -23,7 +23,7 @@ class ProductTile extends StatelessWidget {
                     borderRadius: BorderRadius.circular(4.0),
                   ),
                   child: Image.network(
-                    product.image,
+                    product.image!,
                     fit: BoxFit.cover,
                   ),
                 ),
